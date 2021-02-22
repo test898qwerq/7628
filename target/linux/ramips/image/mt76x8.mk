@@ -90,6 +90,14 @@ define Device/mt7628
 endef
 TARGET_DEVICES += mt7628
 
+define Device/wy-mt7628-test
+  DTS := WY-MT7628-TEST
+  IMAGE_SIZE := 7872k
+  DEVICE_TITLE := WyLink WY-MT7628-TEST
+  DEVICE_PACKAGES := luci openssh-sftp-server
+endef
+TARGET_DEVICES += wy-mt7628-test
+
 define Device/omega2
   DTS := OMEGA2
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
