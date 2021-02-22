@@ -90,13 +90,13 @@ define Device/mt7628
 endef
 TARGET_DEVICES += mt7628
 
-define Device/wy-mt7628-test
-  DTS := WY-MT7628-TEST
+define Device/tl-wdr5620-v3
+  DTS := TL-WDR5620V3
   IMAGE_SIZE := 7872k
-  DEVICE_TITLE := WyLink WY-MT7628-TEST
+  DEVICE_TITLE := TP-Link TL-WDR5620 v3
   DEVICE_PACKAGES := luci openssh-sftp-server
 endef
-TARGET_DEVICES += wy-mt7628-test
+TARGET_DEVICES += tl-wdr5620-v3
 
 define Device/omega2
   DTS := OMEGA2
