@@ -6,8 +6,8 @@
 #include <dt-bindings/input/input.h>
 
 /{
-	compatible = "wylink,wy-mt7628-test", "mediatek,mt7628an-soc";
-	model = "WY-MT7628-TEST";
+	compatible = "tplink,tl-wdr5620-v3", "mediatek,mt7628an-soc";
+	model = "TL-WDR5620V3";
 
 	chosen {
 		bootargs = "console=ttyS0,115200";
