@@ -104,7 +104,7 @@ platform_check_image() {
 	mpr-a2|\
 	mr-102n|\
 	mt7628|\
-	wy-mt7628-test|\
+	tl-wdr5620-v3|\
 	mzk-750dhp|\
 	mzk-dp150n|\
 	mzk-ex300np|\
