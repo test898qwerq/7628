@@ -331,8 +331,8 @@ ramips_board_detect() {
 	*"MT7628AN evaluation"*)
 		name="mt7628"
 		;;
-	*"WY-MT7628-TEST")
-		name="wy-mt7628-test"
+	*"TL-WDR5620V3")
+		name="tl-wdr5620-v3"
 		;;
 	*"MT7688 evaluation"*)
 		name="mt7688"
