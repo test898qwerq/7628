@@ -183,6 +183,17 @@ config ATH79_MACH_AP143
 	select ATH79_DEV_WMAC
 	select ATH79_DEV_ETH
 	select ATH79_DEV_M25P80
+	
+config ATH79_MACH_WY_A934X_TEST
+	bool "WyLink A934X test board"
+	select SOC_AR934X
+	select ATH79_DEV_AP9X_PCI if PCI
+	select ATH79_DEV_ETH
+	select ATH79_DEV_GPIO_BUTTONS
+	select ATH79_DEV_LEDS_GPIO
+	select ATH79_DEV_M25P80
+	select ATH79_DEV_USB
+	select ATH79_DEV_WMAC
 
 config ATH79_MACH_AP147
 	bool "Atheros AP147 reference board"
