@@ -14,6 +14,14 @@ DEVICE_VARS += BOARDNAME CMDLINE CONSOLE IMAGE_SIZE LOADER_TYPE
 
 ifeq ($(SUBTARGET),generic)
 include ./generic.mk
+#include ./generic-legacy-devices.mk
+#include ./generic-senao.mk
+#include ./generic-tp-link.mk
+#include ./generic-ubnt.mk
+include ./fast.mk
+endif
+ifeq ($(SUBTARGET),generic)
+include ./generic.mk
 include ./generic-legacy-devices.mk
 include ./generic-senao.mk
 include ./generic-tp-link.mk
