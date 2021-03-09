@@ -185,6 +185,7 @@ ar71xx_setup_interfaces()
 	ens202ext|\
 	ja76pf2|\
 	rocket-m-ti|\
+	wy-a934x-test|\
 	ubnt-unifi-outdoor)
 		ucidef_set_interface_lan "eth0 eth1"
 		;;
@@ -228,11 +229,6 @@ ar71xx_setup_interfaces()
 		ucidef_set_interfaces_lan_wan "eth1.1" "eth0"
 		ucidef_add_switch "switch0" \
 			"1:lan" "2:lan" "5@eth1"
-		;;
-	wy-a934x-test)
-		ucidef_set_interface_lan_wan "eth1.1" "eth0"
-		ucidef_add_switch "switch0" \
-			"0@eth0" "2:lan:4" "3:lan:3" "4:lan:2" "5:lan:1" "1:wan"
 		;;
 	archer-c5|\
 	archer-c7|\
