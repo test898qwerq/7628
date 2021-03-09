@@ -35,7 +35,6 @@
 #include "machtypes.h"
 
 #define WY_A934X_TEST_GPIO_LED_WLAN		13
-#define WY_A934X_TEST_GPIO_LED_WPS		15
 #define WY_A934X_TEST_GPIO_LED_SYSTEM		14
 
 #define WY_A934X_TEST_GPIO_LED_WAN		18
@@ -44,7 +43,6 @@
 #define WY_A934X_TEST_GPIO_LED_LAN3		21
 #define WY_A934X_TEST_GPIO_LED_LAN4		12
 
-#define WY_A934X_TEST_GPIO_BTN_WPS		17
 #define WY_A934X_TEST_GPIO_BTN_RESET		17
 
 #define WY_A934X_TEST_KEYS_POLL_INTERVAL	14	/* msecs */
@@ -102,21 +100,13 @@ static struct gpio_keys_button a934x_gpio_keys[] __initdata = {
 		.debounce_interval = WY_A934X_TEST_KEYS_DEBOUNCE_INTERVAL,
 		.gpio		= WY_A934X_TEST_GPIO_BTN_RESET,
 		.active_low	= 1,
-	},{
-		.desc		= "wps",
-		.type		= EV_KEY,
-		.code		= KEY_WPS_BUTTON,
-		.debounce_interval = WY_A934X_TEST_KEYS_DEBOUNCE_INTERVAL,
-		.gpio		= WY_A934X_TEST_GPIO_BTN_WPS,
-		.active_low	= 1,
-	}
+	},
 };
 
 static void __init a934x_gpio_led_setup(void)
 {
 	ath79_gpio_direction_select(WY_A934X_TEST_GPIO_LED_WLAN, true);
 	ath79_gpio_direction_select(WY_A934X_TEST_GPIO_LED_WAN, true);
-	ath79_gpio_direction_select(WY_A934X_TEST_GPIO_LED_WPS, true);
 	ath79_gpio_direction_select(WY_A934X_TEST_GPIO_LED_LAN1, true);
 	ath79_gpio_direction_select(WY_A934X_TEST_GPIO_LED_LAN2, true);
 	ath79_gpio_direction_select(WY_A934X_TEST_GPIO_LED_LAN3, true);
@@ -124,7 +114,6 @@ static void __init a934x_gpio_led_setup(void)
 
 	gpio_set_value(WY_A934X_TEST_GPIO_LED_WLAN, 1);
 	gpio_set_value(WY_A934X_TEST_GPIO_LED_WAN, 1);
-	gpio_set_value(WY_A934X_TEST_GPIO_LED_WPS, 1);
 	gpio_set_value(WY_A934X_TEST_GPIO_LED_LAN1, 1);
 	gpio_set_value(WY_A934X_TEST_GPIO_LED_LAN2, 1);
 	gpio_set_value(WY_A934X_TEST_GPIO_LED_LAN3, 1);
@@ -132,7 +121,6 @@ static void __init a934x_gpio_led_setup(void)
 
 	ath79_gpio_output_select(WY_A934X_TEST_GPIO_LED_WLAN, 0);
 	ath79_gpio_output_select(WY_A934X_TEST_GPIO_LED_WAN, 0);
-	ath79_gpio_output_select(WY_A934X_TEST_GPIO_LED_WPS, 0);
 	ath79_gpio_output_select(WY_A934X_TEST_GPIO_LED_LAN1, 0);
 	ath79_gpio_output_select(WY_A934X_TEST_GPIO_LED_LAN2, 0);
 	ath79_gpio_output_select(WY_A934X_TEST_GPIO_LED_LAN3, 0);
@@ -144,7 +132,7 @@ static void __init a934x_gpio_led_setup(void)
 
 static void __init a934x_setup(void)
 {
-	u8 *art = (u8 *) KSEG1ADDR(0x1f7f0000);
+	u8 *art = (u8 *) KSEG1ADDR(0x1fff0000);
 
 	ath79_register_m25p80(NULL);
 
