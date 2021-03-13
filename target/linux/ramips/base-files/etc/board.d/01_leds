@@ -350,8 +350,7 @@ re350-v1)
 	ucidef_set_led_switch "eth_link" "LAN link" "$boardname:green:eth_link" "switch0" "0x01"
 	;;
 tl-wdr5620-v3)
-	ucidef_set_led_netdev "wan" "wan" "$boardname:white:wan" eth0.2
-	set_wifi_led "$boardname:white:wifi"
+	ucidef_set_led_default "power" "power" "$boardname:white:power" "1"
 	;;
 re6500)
 	ucidef_set_led_default "power" "power" "$boardname:white:power" "1"
