@@ -22,8 +22,8 @@
 		compatible = "gpio-leds";
 		
 		wifi {
-			label = "r6220:white:wifi";
-			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
+			label = "tl-wdr5620-v3:white:wifi";
+			gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 		};
 
 	};
