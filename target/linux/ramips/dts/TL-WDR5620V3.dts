@@ -21,8 +21,8 @@
 	gpio-leds {
 		compatible = "gpio-leds";
 		
-		wifi {
-			label = "tl-wdr5620-v3:white:wifi";
+		power {
+			label = "tl-wdr5620-v3:green:power";
 			gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 		};
 
