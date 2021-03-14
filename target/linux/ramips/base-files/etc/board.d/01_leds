@@ -351,6 +351,7 @@ re350-v1)
 	;;
 tl-wdr5620-v3)
 	ucidef_set_led_default "power" "power" "$boardname:white:power" "1"
+	ucidef_set_led_default "power2" "power2" "$boardname:white:power2" "1"
 	;;
 re6500)
 	ucidef_set_led_default "power" "power" "$boardname:white:power" "1"
